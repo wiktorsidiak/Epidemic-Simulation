@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface simulationDefinitionService {
 
-    void createDefinition(simulationDefinition definition);
-
     List<simulationDefinition> getDefinition();
+
+    void deleteDefinition(simulationDefinition definition);
 }

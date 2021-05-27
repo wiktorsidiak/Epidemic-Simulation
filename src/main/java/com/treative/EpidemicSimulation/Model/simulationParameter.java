@@ -7,21 +7,21 @@ import javax.persistence.Entity;
 @Entity(name = "simulation_parameter")
 @Data
 public class simulationParameter {
-    @Column(name = "N")
+    @Column(name = "n")
     String N;
-    @Column(name = "P")
+    @Column(name = "p")
     int P;
-    @Column(name = "I")
+    @Column(name = "i")
     int I;
-    @Column(name = "R")
+    @Column(name = "r")
     int R;
-    @Column(name = "M")
+    @Column(name = "m")
     int M;
-    @Column(name = "Ti")
+    @Column(name = "ti")
     int Ti;
-    @Column(name = "Tm")
+    @Column(name = "tm")
     int Tm;
-    @Column(name = "Ts")
+    @Column(name = "ts")
     int Ts;
 
 }

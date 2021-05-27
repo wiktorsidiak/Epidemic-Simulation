@@ -10,12 +10,12 @@ import javax.persistence.Entity;
 public class simulationDefinition {
    @Column(name = "day")
    int day;
-   @Column(name = "Pi")
+   @Column(name = "pi")
    int Pi;
-   @Column(name = "Pv")
+   @Column(name = "pv")
    int Pv;
-   @Column(name = "Pm")
+   @Column(name = "pm")
    int Pm;
-   @Column(name = "Pr")
+   @Column(name = "pr")
    int Pr;
 }

@@ -5,4 +5,6 @@ import com.treative.EpidemicSimulation.Model.simulationParameter;
 public interface simulationParameterService {
 
     void createParameter(simulationParameter parameter);
+
+    void deleteParameter(simulationParameter parameter);
 }

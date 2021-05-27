@@ -20,14 +20,21 @@ public class simulationDefinitionDAOImpl implements  simulationDefinitionDAO{
     @Override
     public void createDefinition(simulationDefinition definition) {
         String SQLDefinition = "INSERT INTO simulation_definition(day, pi, pv, pm, pr) VALUES (?,?,?,?,?)";
-        jdbcTemplate.update(SQLDefinition, definition.getDay(), definition.getPi(),definition.getPv(),
-                definition.getPm(),definition.getPr());
+            jdbcTemplate.update(SQLDefinition, definition.getDay(), definition.getPi(),definition.getPv(),
+                                definition.getPm(),definition.getPr());
     }
 
     @Override
     public List<simulationDefinition> getDefinition() {
-            String SQLSimulation = "SELECT * FROM simulation_definition";
+        String SQLSimulation = "SELECT * FROM simulation_definition";
             RowMapper<simulationDefinition> definitionMapper = new simulationDefinitionMapper();
             return jdbcTemplate.query(SQLSimulation, definitionMapper);
     }
+
+    @Override
+    public void deleteDefinition(simulationDefinition definition) {
+        String SQLDefinition = "DELETE FROM simulation_definition";
+        jdbcTemplate.execute(SQLDefinition);
+    }
+
 }

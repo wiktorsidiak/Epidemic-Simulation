@@ -15,7 +15,9 @@ public class addParameterController {
     private final simulationParameterService parameterService;
 
     @RequestMapping(value = {"/addParameter"}, method = RequestMethod.POST)
-    public void addParameter(@RequestBody simulationParameter parameter){
-        parameterService.createParameter(parameter);
+    public void addParameter(@RequestBody simulationParameter parameter) {
+            parameterService.createParameter(parameter);
+        }
+
     }
-}
+

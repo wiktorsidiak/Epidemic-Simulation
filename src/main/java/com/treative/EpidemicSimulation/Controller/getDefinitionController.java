@@ -2,7 +2,6 @@ package com.treative.EpidemicSimulation.Controller;
 
 import com.treative.EpidemicSimulation.Model.simulationDefinition;
 import com.treative.EpidemicSimulation.Service.simulationDefinitionService;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,7 +18,6 @@ public class getDefinitionController {
 
     @RequestMapping(value = {"/definition"}, method = RequestMethod.GET)
     public List<simulationDefinition> getDefinition(){
-        definitionService.createDefinition(definition);
         return definitionService.getDefinition();
     }
 }
